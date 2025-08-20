@@ -1,8 +1,7 @@
-
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
-import RestaurantList from './components/RestaurantList'
-import MenuList from './components/MenuList'
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import RestaurantList from './components/RestaurantList';
+import DetailsResto from './pages/detailsresto'; // Corrigez le nom ici
 
 function App() {
   return (
@@ -14,12 +13,11 @@ function App() {
         {/* Page menu d'un restaurant par id */}
         <Route
           path="restaurant/:id/menu"
-          element={<MenuList />}
+          element={<DetailsResto />} // Corrigez le nom ici
         />
       </Routes>
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;

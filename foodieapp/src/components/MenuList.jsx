@@ -24,13 +24,14 @@ function MenuList() {
   return (
     <div>
       <h3>Menu du restaurant</h3>
-      <ul>
         {list.map((item) => (
-          <li key={item.id}>
-            {item.name} - {item.prix} MAD
-          </li>
+          <div key={item.id}>
+            <button><img src="/img/etoile.png" alt="" height={50} width={50} /></button>
+            <img src={item.image} alt={item.name} width={50} height={50} />
+            <div>{item.name} - {item.prix} MAD </div>
+            <button><img src="/img/carte.png" alt="" height={50} width={50}/></button>
+          </div>
         ))}
-      </ul>
     </div>
   );
 }

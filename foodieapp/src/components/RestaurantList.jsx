@@ -26,8 +26,10 @@ function RestaurantList() {
       <ul>
         {list.map((resto) => (
           <div>
-          <li key={resto.id}>{resto.name}</li>
-          <button onClick={() => handleVoirDetails(resto, resto.id)}>Voir le menu</button>
+              <img src={resto.logo} alt="" />
+              {resto.name}
+              <p>{resto.city} : ⭐ {resto.rating}</p>
+          <button onClick={() => handleVoirDetails(resto, resto.id)}>Voir le details</button>
           </div>
         ))}
       </ul>
