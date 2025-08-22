@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import RestaurantList from './components/RestaurantList';
 import DetailsResto from './pages/detailsresto'; // Corrigez le nom ici
+import Cart from './pages/panier';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
           path="restaurant/:id/menu"
           element={<DetailsResto />} // Corrigez le nom ici
         />
+        {/* Page panier */}
+        <Route path="/panier" element={<Cart />} />
       </Routes>
     </>
   );
