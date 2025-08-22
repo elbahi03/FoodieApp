@@ -1,0 +1,84 @@
+.home-hero {
+  background-image: url('../public/img/bgff.jfif');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.home-hero h1 {
+  font-size: 90px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: #8AA624;
+}
+
+.home-hero p {
+  font-size: 1.5rem;
+  margin-top: 0px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.home-hero a {
+  background-color: #8AA624;
+  color: #DBE4C9;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.home-hero a:hover {
+  background-color: #6F8A1B;
+  color: #FFFFFF;
+    transition: background-color 0.3s ease;
+}
+
+.home-info {
+    background-color: #f9f9f9; /* Couleur de fond douce */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .home-info h1 {
+    font-size: 2rem;
+    color: #ff6347; /* Couleur vive pour attirer l'attention */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .home-info p {
+    font-size: 1.2rem;
+    color: #333; /* Couleur de texte sombre pour une bonne lisibilité */
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+  
+  .home-info p:last-child {
+    font-weight: bold; /* Mettre en valeur le dernier paragraphe */
+    color: #ff6347;
+  }
+
+  @media (max-width: 768px) {
+    .home-hero h1 {
+      font-size: 1.5rem; /* Réduction de la taille du titre */
+    }
+  
+    .home-hero p {
+      font-size: 0.9rem; /* Réduction de la taille du texte */
+    }
+  
+    .home-hero .btn {
+      font-size: 0.9rem; /* Bouton légèrement plus petit */
+      padding: 8px 16px;
+    }
+  }

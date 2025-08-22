@@ -3,21 +3,21 @@ import './App.css';
 import RestaurantList from './components/RestaurantList';
 import DetailsResto from './pages/detailsresto'; // Corrigez le nom ici
 import Cart from './pages/panier';
+import Home from './pages/home';
+import Apropos from './pages/Apropos';
+import Header from './components/header';
 
 function App() {
   return (
     <>
+      <Header />
       <Routes>
-        {/* Page d'accueil avec la liste des restaurants */}
-        <Route path="/" element={<RestaurantList />} />
-
-        {/* Page menu d'un restaurant par id */}
-        <Route
-          path="restaurant/:id/menu"
-          element={<DetailsResto />} // Corrigez le nom ici
-        />
-        {/* Page panier */}
+        <Route path="/" element={<Home />} />
+        <Route path="/restaurants" element={<RestaurantList />} />
+        <Route  path="restaurant/:id/menu" element={<DetailsResto />} />
+        <Route path="/Apropos" element={<Apropos />} />
         <Route path="/panier" element={<Cart />} />
+
       </Routes>
     </>
   );

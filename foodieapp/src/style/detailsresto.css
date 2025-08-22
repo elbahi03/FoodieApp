@@ -5,18 +5,131 @@
   
   .swiper-slide {
     text-align: center;
-    font-size: 18px;
-    background: #444;
-  
-    /* Center slide text vertically */
+    font-size: 18px;  
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
+
+  .details-resto .gallery-section .swiper-slide img {
+    max-width: 100%;
+    height:  400px ;
+    object-fit: cover; 
+    border-radius: 10px;
+  }
+
+  .gallery-image {
+    border-radius: 10px;
+    max-height: 200px;
     object-fit: cover;
   }
+
+.details-resto {
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.details-resto h2 {
+  text-align: center;
+  color: #ff6347;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.restaurant-logo {
+  width: 50%;
+  height: 50%; 
+  object-fit: cover;
+  border-radius: 10px; 
+  margin-bottom: 15px; 
+}
+
+.details-resto .restaurant-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.details-resto .restaurant-info h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.details-resto .restaurant-info p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.details-resto .menu-section {
+  margin: 30px 0;
+}
+
+.details-resto .gallery-section {
+  margin: 30px 0;
+}
+
+.details-resto .gallery-section h2 {
+  text-align: center;
+  color: #ff6347;
+  margin-bottom: 20px;
+}
+
+.details-resto .swiper-slide img {
+  border-radius: 10px;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.details-resto .contact-section {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.details-resto .contact-section p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.details-resto .contact-section strong {
+  color: #ff6347;
+}
+
+.details-resto .comments-section {
+  margin: 30px 0;
+}
+
+.details-resto .comments-section h2 {
+  text-align: center;
+  color: #ff6347;
+  margin-bottom: 20px;
+}
+
+.details-resto .review {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.details-resto .review img {
+  border-radius: 50%;
+}
+
+.details-resto .review p {
+  margin: 0;
+  color: #333;
+}
+
+.details-resto .review strong {
+  color: #ff6347;
+}

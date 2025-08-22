@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMenu, clearMenu } from "../store/menuSlice";
-import { addToCart } from "../store/cartSlice"; // Importer l'action addToCart
+import { addToCart } from "../store/cartSlice";
 import { useLocation, useNavigate } from "react-router-dom";
+import "../style/MenuList.css"; 
 
 function MenuList() {
   const location = useLocation();
@@ -20,8 +21,8 @@ function MenuList() {
   }, [dispatch, restaurantId]);
 
   const handleAddToCart = (item) => {
-    console.log("Ajout au panier :", item); // Vérifiez que l'article est affiché dans la console
-    dispatch(addToCart(item)); // Ajouter l'article au panier
+    console.log("Ajout au panier :", item);
+    dispatch(addToCart(item));
   };
 
   if (loading) return <p>Chargement du menu...</p>;
@@ -29,20 +30,19 @@ function MenuList() {
   if (list.length === 0) return <p>Aucun plat trouvé.</p>;
 
   return (
-    <div>
+    <div className="menu-list">
       <h3>Menu du restaurant</h3>
-      {list.map((item) => (
-        <div key={item.id}>
-          <img src={item.image} alt={item.name} width={50} height={50} />
-          <div>{item.name} - {item.prix} MAD </div>
-          <button onClick={() => handleAddToCart(item)}>
-            <img src="/img/carte.png" alt="" height={50} width={50} />
-          </button>
-        </div>
-      ))}
-      <div>
-      <button onClick={() => navigate("/panier")}>Voir le panier</button>
-    </div>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "20px", justifyContent: "center" }}>
+        {list.map((item) => (
+          <div key={item.id} className="menu-item">
+            <img src={item.image} alt={item.name} />
+            <div>{item.name} - {item.prix} MAD</div>
+            <button onClick={() => handleAddToCart(item)}>
+              Ajouter au panier
+            </button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
